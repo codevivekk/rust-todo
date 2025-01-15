@@ -155,8 +155,9 @@ fn main() {
         println!("1. Add tasks");
         println!("2. View a task");
         println!("3. Remove a task");
-        println!("4. Mark task as completed");
-        println!("5. Exit");
+        println!("4. Edit Task");
+        println!("5. Mark task as completed");
+        println!("6. Exit");
 
         let choice: String = get_options();
 
@@ -175,6 +176,10 @@ fn main() {
             }
             "5" => {
                 mark_as_completed(&mut tasks);
+            }
+            "6" => {
+                println!("Exiting the TODO List. Goodbye!");
+                break; 
             }
             _ => {
                 println!("Invalid choice");
